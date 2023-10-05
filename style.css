@@ -48,6 +48,9 @@ h1 {
 .wrapper {
      width: 100vw;
      height: 100vh;
+     max-height: screen;
+     overflow-y: scroll;
+     overflow-x: auto;
      display: flex;
      flex-direction: column;
      justify-content: center;
@@ -385,7 +388,7 @@ input[type="checkbox"] {
      }
 
      .wrapper {
-          height: 15cm;
+          overflow-y: scroll;
      }
 
      .tooltip {
@@ -400,6 +403,7 @@ input[type="checkbox"] {
      h1 {
           font-size: 1em;
           margin-bottom: 10px;
+          color: var(--Dark-ORange);
      }
 
      .tooltip {
@@ -413,13 +417,19 @@ input[type="checkbox"] {
           width: 1.5rem;
      }
 
+     #snackbar {
+          width: 100px;
+          padding: 8px;
+          font-size: 0.8rem;
+     }
+
 }
 
-@media (max-width: 306px) and (min-width: 276px) {
+@media (min-width: 276px) and (max-width: 306px) {
 
      .tooltip {
           position: absolute;
-          top: 18%;
+          top: 15%;
           padding: 2px 5px;
           font-size: 1em;
      }
@@ -430,5 +440,15 @@ input[type="checkbox"] {
 
      .generateButton {
           font-size: small;
+     }
+
+     #snackbar {
+          width: 100px;
+          padding: 8px;
+          font-size: 0.6rem;
+     }
+
+     h1 {
+          color: var(--Dark-ORange);
      }
 }
